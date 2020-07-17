@@ -2,29 +2,18 @@ package com.imc.players;
 
 import com.imc.figures.FigureType;
 
+import java.util.Random;
+
 public class Computer implements Player {
 
-    private final NumberProvider numberProvider;
+    private final Random random;
 
-    public Computer(NumberProvider numberProvider) {
-        this.numberProvider = numberProvider;
+    public Computer() {
+        this.random = new Random();
     }
 
     @Override
     public FigureType makeMove() {
-        switch (numberProvider.get()) {
-            case 0:
-                return FigureType.ROCK;
-            case 1:
-                return FigureType.PAPER;
-            case 2:
-                return FigureType.SCISSORS;
-            default:
-                return null;
-        }
-    }
-
-    public interface NumberProvider {
-        int get();
+        return FigureType.get(random.nextInt(FigureType.values().length));
     }
 }

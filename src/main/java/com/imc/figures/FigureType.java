@@ -7,19 +7,23 @@ public enum FigureType {
     PAPER("Paper", Paper::new),
     SCISSORS("Scissors", Scissors::new);
 
-    private final String name;
-    private final Supplier<Figure> supplier;
+    private static final FigureType[] values = values();
 
-    FigureType(String name, Supplier<Figure> supplier) {
+    private final String name;
+    private final Supplier<Figure> figureSupplier;
+
+    FigureType(String name, Supplier<Figure> figureSupplier) {
         this.name = name;
-        this.supplier = supplier;
+        this.figureSupplier = figureSupplier;
     }
+
+    public static FigureType get(int ordinal) { return values[ordinal]; }
 
     public String getName() {
         return name;
     }
 
     public Figure getFigure() {
-        return supplier.get();
+        return figureSupplier.get();
     }
 }

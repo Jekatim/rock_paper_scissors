@@ -1,13 +1,8 @@
 package com.imc.figures;
 
-public class Scissors extends Figure{
+public class Scissors extends Figure {
 
     public Scissors() {
-        super(FigureType.ROCK);
-    }
-
-    @Override
-    protected FigureType getFigureType() {
-        return null;
+        super(FigureType.SCISSORS, FigureType.ROCK);
     }
 }

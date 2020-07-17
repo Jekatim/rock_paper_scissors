@@ -1,13 +1,8 @@
 package com.imc.figures;
 
-public class Rock extends Figure{
+public class Rock extends Figure {
 
     public Rock() {
-        super(FigureType.PAPER);
-    }
-
-    @Override
-    protected FigureType getFigureType() {
-        return FigureType.ROCK;
+        super(FigureType.ROCK, FigureType.PAPER);
     }
 }

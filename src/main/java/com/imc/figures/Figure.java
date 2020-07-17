@@ -9,7 +9,8 @@ public abstract class Figure {
     protected Set<FigureType> beatableBy;
     protected FigureType figureType;
 
-    protected Figure(FigureType... beatableBy) {
+    protected Figure(FigureType figureType, FigureType... beatableBy) {
+        this.figureType = figureType;
         this.beatableBy = new HashSet<>();
         Collections.addAll(this.beatableBy, beatableBy);
     }
@@ -18,9 +19,7 @@ public abstract class Figure {
         return beatableBy.contains(figure.getFigureType());
     }
 
-    protected abstract FigureType getFigureType();
-
-    public final String getName(){
-        return figureType.getName();
+    private FigureType getFigureType(){
+        return figureType;
     }
 }

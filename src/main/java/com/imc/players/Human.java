@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Human implements Player {
 
     private final Scanner scanner;
-    private String name;
+    private final String name;
 
     public Human(String name) {
         this.name = name;
