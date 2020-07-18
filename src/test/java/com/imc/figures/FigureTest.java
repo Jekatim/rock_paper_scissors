@@ -17,4 +17,10 @@ class FigureTest {
         assertTrue(PAPER.isBeated(SCISSORS));
     }
 
+    @Test
+    void backtrack() {
+        for (FigureType type : FigureType.values()) {
+            assertEquals(type, type.getFigure().figureType);
+        }
+    }
 }

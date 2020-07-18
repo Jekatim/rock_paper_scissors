@@ -3,9 +3,9 @@ package com.imc.figures;
 import java.util.function.Supplier;
 
 public enum FigureType {
-    ROCK("Rock", Rock::new),
-    PAPER("Paper", Paper::new),
-    SCISSORS("Scissors", Scissors::new);
+    ROCK("Rock", Rock::getInstance),
+    PAPER("Paper", Paper::getInstance),
+    SCISSORS("Scissors", Scissors::getInstance);
 
     private static final FigureType[] values = values();
 
