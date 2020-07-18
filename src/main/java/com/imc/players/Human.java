@@ -9,9 +9,10 @@ public class Human implements Player {
     private final Scanner scanner;
     private final String name;
 
-    public Human(String name) {
-        this.name = name;
-        this.scanner = new Scanner(System.in);
+    public Human(Scanner scanner) {
+        System.out.println("Enter your name:");
+        this.name = scanner.nextLine();
+        this.scanner = scanner;
     }
 
     @Override
@@ -38,6 +39,7 @@ public class Human implements Player {
         return figureType;
     }
 
+    @Override
     public String getName() {
         return name;
     }
