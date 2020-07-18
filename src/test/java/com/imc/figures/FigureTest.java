@@ -11,14 +11,14 @@ class FigureTest {
     private final static Scissors SCISSORS = new Scissors();
 
     @Test
-    void fightLogic(){
+    void fightLogicTest(){
         assertTrue(SCISSORS.isBeated(ROCK));
         assertTrue(ROCK.isBeated(PAPER));
         assertTrue(PAPER.isBeated(SCISSORS));
     }
 
     @Test
-    void backtrack() {
+    void backtrackTest() {
         for (FigureType type : FigureType.values()) {
             assertEquals(type, type.getFigure().figureType);
         }
