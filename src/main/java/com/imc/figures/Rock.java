@@ -4,7 +4,7 @@ public class Rock extends Figure {
 
     private static final Rock INSTANCE = new Rock();
 
-    public Rock() {
+    private Rock() {
         super(FigureType.ROCK, FigureType.PAPER);
     }
 

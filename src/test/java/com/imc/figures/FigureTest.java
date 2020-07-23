@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FigureTest {
 
-    private final static Rock ROCK = new Rock();
-    private final static Paper PAPER = new Paper();
-    private final static Scissors SCISSORS = new Scissors();
+    private final static Rock ROCK = Rock.getInstance();
+    private final static Paper PAPER = Paper.getInstance();
+    private final static Scissors SCISSORS = Scissors.getInstance();
 
     @Test
     void fightLogicTest(){

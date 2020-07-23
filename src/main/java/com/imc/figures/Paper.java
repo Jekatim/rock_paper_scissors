@@ -4,7 +4,7 @@ public class Paper extends Figure {
 
     private static final Paper INSTANCE = new Paper();
 
-    public Paper() {
+    private Paper() {
         super(FigureType.PAPER, FigureType.SCISSORS);
     }
 

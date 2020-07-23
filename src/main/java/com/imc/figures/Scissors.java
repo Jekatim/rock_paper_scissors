@@ -4,7 +4,7 @@ public class Scissors extends Figure {
 
     private static final Scissors INSTANCE = new Scissors();
 
-    public Scissors() {
+    private Scissors() {
         super(FigureType.SCISSORS, FigureType.ROCK);
     }
 
